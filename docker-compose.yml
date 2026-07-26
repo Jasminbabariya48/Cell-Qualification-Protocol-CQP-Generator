@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  cqp-generator:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=True
+    volumes:
+      - ./outputs:/app/outputs
+      - ./template:/app/template
